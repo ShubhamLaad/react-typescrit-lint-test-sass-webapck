@@ -1,5 +1,5 @@
 {
-  "name": "react-typescript-todo",
+  "name": "react-typescrit-lint-test-sass-webapck",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git@github.com:ShubhamLaad/react-typescrit-lint-test-sass-webapck.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": ""
+    "url": "github.com:ShubhamLaad/react-typescrit-lint-test-sass-webapck.git"
   },
-  "homepage": "",
+  "homepage": "github.com:ShubhamLaad/react-typescrit-lint-test-sass-webapck.git",
   "devDependencies": {
     "@types/enzyme": "^3.1.15",
     "@types/jest": "^23.3.10",
