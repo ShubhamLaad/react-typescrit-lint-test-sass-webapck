@@ -6,7 +6,6 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.js",
     "build": "npm run test && rimraf ./dist && webpack --config webpack.config.js --progress --profile --colors",
-    "lint": "tslint --project . ",
     "jest": "jest",
     "test": "npm run jest"
   },
