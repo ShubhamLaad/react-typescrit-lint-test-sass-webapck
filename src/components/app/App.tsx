@@ -55,12 +55,21 @@ class App extends React.Component<{}, IState> {
     );
   }
 
+  private filterCity(city: string) {
+    const { selectedCityNames } = this.state;
+    if (selectedCityNames.length) {
+      return selectedCityNames.includes(city);
+    }
+    return true;
+  }
+
   private filterFlights() {
-    const { selectedCityNames, selectedDate } = this.state;
+    const { selectedDate } = this.state;
+
     if (selectedDate) {
       const flights = FLIGHTS.filter(flight => {
         return App.getStartOfDayDate(selectedDate.getTime()) === App.getStartOfDayDate(flight.flightDate)
-          && (!selectedCityNames.length || selectedCityNames.includes(flight.destination.cityName))
+          && this.filterCity(flight.destination.cityName.toLowerCase())
       })
       flights.sort((first, next) => {
         return first.amount - next.amount;
@@ -78,7 +87,7 @@ class App extends React.Component<{}, IState> {
   }
 
   private handleMultiSelectChange(selectedCityNames: string[]) {
-    this.setState({ selectedCityNames })
+    this.setState({ selectedCityNames }, this.filterFlights)
   }
 }
 
