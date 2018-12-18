@@ -1,8 +1,3 @@
-# react-typescrit-lint-test-sass-webapck
-
-# React-Redux-Test-Boilerplate
-React16, Webapck4, redux, routing, http request call using axios
-
 ## Table of Contents
 
 - [Setup](#setup)

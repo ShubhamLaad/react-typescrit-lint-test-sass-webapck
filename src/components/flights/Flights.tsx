@@ -41,6 +41,10 @@ export const AmountFlag: React.StatelessComponent<{ amount: number }> = ({ amoun
 }
 
 export const Flights: React.StatelessComponent<IProps> = ({ flights }) => {
+  if (!flights.length) {
+    return <p className="text-center">No flight is found</p>
+  }
+
   return (
     <ul className="flights row">
       {flights.map(flight => <li
